@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>intern</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/df91c89325.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="main">
+        <header>
+       <!-- logo -->
+            <a href=""> <img class="logo" src="logo.png" alt="logo"></a>
+        <i class="bar fa fa-bars fa-2x" aria-hidden="true"></i>
+<!-- nav  starts -->
+        <div class="nav">
+
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#abt">about us</a></li>
+                <li><a href="#service">service</a></li>
+                <li><a href="#cilents">clients</a></li>
+                <li><a href="#contact">contact</a></li>
+            
+            </ul>
+                </div>
+    </header>
+<!-- her section -->
+    <section class="hero">  
+        <h1 class="hero-text">We provide <br><span>solutions</span> <br>for your business!</h1>    
+<img class="hero-img" src="https://cdn.mos.cms.futurecdn.net/DvRcHH4z9chNHqoBr5FS67.jpg" alt="">
+<a href="#abt"><i class=" scroll fas fa-arrow-up fa-2x"></i></a>
+    </section>
+
+<!-- abt section starts -->
+    <section class="abt" id="abt">
+        <h4 class="heading">About Us</h4>
+<p class="para">Together we make life simplified,<br>  Meticulous designs to   precisely reflect,<br>  your brand image.</p>
+<img class="abt-img "src="https://freewebillustrations.com/static/images/intro.svg" alt="">
+<a href="#cilents" class="btn">cilents</a>
+    <a href="#contact" class="btn1">contact </a>
+</section>
+
+<!-- service section starts -->   
+    <section class="service" id="service">
+    
+        <button id="prev-btn">
+            <i class="fas fa-arrow-circle-left"></i>
+                </button>
+        <!-- The Book -->
+   <div id="book" class="book">
+  <!-- Paper 1 -->
+ <div id="p1" class="paper">
+ <div class="front">
+ <div id="f1" class="front-content">
+ <h1 class="book-title">our services</h1>
+ 
+ </div>
+</div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <h3>MOBILE APPLICATION</h3>
+                        <div class="content">
+                            <p>Native and cross-platform mobile applications and services pertaining to specialized client requirements and preferences. From apps for commerce to apps for finding the right partners; Occupying a few megabytes in a customer’s phone is essential but enduring the testament of time and potential uninstallation is critical.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Paper 2 -->
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="b1" class="front-content">
+                        <h3>WEB DEVELOPMENT</h3>
+                      <p>In-house algorithm to discern the response of site traffic and develop changes to better cater target demographics that befits every individual client. Responsive corporate designs, management systems,
+                           creative web pieces and e-commerce portals; web pages that fit like your very own virtual Italian suit.</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                     
+                        <h3>GRAPHIC DESIGNING</h3>
+                    <p>Meticulous designs to precisely reflect your brand image. Logos, posters, teasers and graphical photo 
+                        compositions for businesses and creative professionals..</p>
+                     
+            
+                </div>
+                </div>
+            </div>
+            <!-- Paper 3 -->
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="b1" class="front-content">
+                        <h3>VIDEO EDITING</h3><p>From Corporate Videos to Short Films we deliver high quality imaging cuts..</p>
+                 
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <h3>DIGITAL MARKETING</h3>
+                    <p>Achieve maximum online visibility; reaching potential clientele for your services through social media and search engines.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <button id="next-btn">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+    
+    
+    </section>         
+
+
+    <section class="clients" id="cilents">
+        <h4 class="heading2">Cilents</h4>
+        <div class="wrapper">
+            <div class="cube-box">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">
+                <img src="images/1.jpg">   
+            </div>
+        </div>
+        
+
+    </section>
+    <!--contact section-->         
+<section class="contact" id="contact">
+<h4 class="heading">contact</h4>
+<div class="medias">
+    <i class="select fb fa fa-facebook-official" aria-hidden="true"></i>
+    <i class="insta fa fa-instagram" aria-hidden="true"></i>
+    <i class="mail fa fa-envelope-o" aria-hidden="true"></i>
+    <i class="whats fa fa-whatsapp" aria-hidden="true"></i>
+</div>
+
+</section>
+    <!--footer section-->
+<section class="footer">
+    <p> &copyallrights resrved</p>
+</section>
+</div>
+
+<script>
+var bar = document.querySelector(".bar");
+var nav = document.querySelector(".nav");
+
+
+bar.addEventListener("click", () => {
+  nav.classList.toggle("active")
+});
+// References to DOM elements
+const prevBtn = document.querySelector('#prev-btn');
+const nextBtn = document.querySelector('#next-btn');
+const book = document.querySelector('#book');
+
+const paper1 = document.querySelector('#p1')
+const paper2 = document.querySelector('#p2')
+const paper3 = document.querySelector('#p3')
+
+// Event listeners
+prevBtn.addEventListener("click", goPrevious);
+nextBtn.addEventListener("click", goNext);
+
+// Business Logic
+let currentState = 1;
+let numOfPapers = 3;
+let maxState = numOfPapers + 1;
+
+
+function openBook() {
+    book.style.transform = "translateX(50%)";
+    prevBtn.style.transform = "translateX(-180px)";
+    nextBtn.style.transform = "translateX(180px)";
+}
+
+function closeBook(isFirstPage) {
+    if(isFirstPage) {
+        book.style.transform = "translateX(0%)";
+    } else {
+        book.style.transform = "translateX(100%)";
+    }
+    prevBtn.style.transform = "translateX(0px)";
+    nextBtn.style.transform = "translateX(0px)";
+}
+
+function goNext() {
+    if(currentState < maxState) { 
+        switch(currentState) {
+            case 1:
+                openBook();
+                paper1.classList.add("flipped");
+                paper1.style.zIndex = 1;
+                break;
+            case 2:
+                paper2.classList.add("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 3:
+                closeBook(false);
+                paper3.classList.add("flipped");
+                paper3.style.zIndex = 3;
+                break;
+            default: 
+                throw new Error("unkown state");    
+        }
+
+        currentState++;
+    }
+}
+
+function goPrevious() {
+    if(currentState > 1) {
+        switch(currentState) {
+            case 2:
+                closeBook(true);
+                paper1.classList.remove("flipped");
+                paper1.style.zIndex = 3;
+                break;
+            case 3:
+                paper2.classList.remove("flipped");
+                paper2.style.zIndex = 2;
+                break;
+            case 4: 
+                openBook()
+                paper3.classList.remove("flipped");
+                paper3.style.zIndex = 1;
+                break;
+        }
+
+        currentState--;
+    }
+}
+</script>
+</body>
+</html>
